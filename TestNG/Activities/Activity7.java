@@ -3,6 +3,7 @@ package activities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,7 +15,7 @@ public class Activity7 {
 
     @BeforeClass
     public void setUp(){
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.get("https://www.training-support.net/selenium/login-form");
         driver.manage().window().maximize();
     }

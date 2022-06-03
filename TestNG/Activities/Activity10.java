@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -18,7 +19,7 @@ public class Activity10 {
 
     @BeforeTest
     public void setUp(){
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         Reporter.log("Starting the test");
         driver.get("https://www.training-support.net/selenium/sliders");
         driver.manage().window().maximize();

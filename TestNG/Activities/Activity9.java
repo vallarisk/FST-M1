@@ -4,6 +4,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.*;
@@ -15,7 +16,7 @@ public class Activity9 {
     @BeforeTest
     public void setUp(){
         Reporter.log("Test Set up started");
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.get("https://www.training-support.net/selenium/javascript-alerts");
         driver.manage().window().maximize();
     }
@@ -42,6 +43,7 @@ public class Activity9 {
         Assert.assertEquals(alert.getText(),"This is a JavaScript Confirmation!");
         alert.dismiss();
         Reporter.log("Dismissed Confirmation Alert");
+        Reporter.getCurrentTestResult();
     }
     @Test
     public void promptAlertTestCase(){

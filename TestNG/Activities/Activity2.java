@@ -20,13 +20,13 @@ public class Activity2 {
 
     }
 
-    @Test
+    @Test (priority = 0)
     public void firstTest(){
        String title = driver.getTitle();
         Assert.assertEquals(title, "Training Support");
     }
 
-    @Test
+    @Test(invocationCount = 10)
     public void secondTest(){
          String s = driver.findElement(By.xpath("//a[contains(@class, 'button')]")).getCssValue("color");
          Assert.assertEquals(s,"rgb(46, 204, 64)");
