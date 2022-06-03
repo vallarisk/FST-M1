@@ -1,17 +1,15 @@
 package Activities;
 
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.List;
 
 public class Activity8_1 {
     public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         driver.get("https://www.training-support.net/selenium/tables");
         driver.manage().window().maximize();
 

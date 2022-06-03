@@ -3,13 +3,13 @@ package Activities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 public class Activity10_3 {
     public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         driver.get("https://training-support.net/selenium/drag-drop");
         driver.manage().window().maximize();
 
@@ -27,7 +27,6 @@ public class Activity10_3 {
         action.clickAndHold(ball).dragAndDrop(ball, dropZone2).build().perform();
         String dropZone2color = dropZone2.getCssValue("background-color");
         Assert.assertEquals(dropZone2color, "rgba(33, 186, 69, 1)");
-
         driver.close();
     }
 }

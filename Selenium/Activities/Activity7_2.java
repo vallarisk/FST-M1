@@ -2,7 +2,7 @@ package Activities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -11,7 +11,7 @@ import java.time.Duration;
 public class Activity7_2 {
 
     public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.get("https://training-support.net/selenium/dynamic-attributes");
         driver.manage().window().maximize();

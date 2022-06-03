@@ -3,12 +3,13 @@ package Activities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Activity4_3 {
 
         public static void main(String[] args) {
 
-            WebDriver driver = new ChromeDriver();
+            WebDriver driver = new FirefoxDriver();
             driver.get("https://www.training-support.net/selenium/target-practice");
             driver.manage().window().maximize();
             System.out.println("Page titel is "+driver.getTitle());

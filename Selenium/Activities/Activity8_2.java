@@ -3,14 +3,14 @@ package Activities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.List;
 
 public class Activity8_2 {
 
     public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         driver.get("https://www.training-support.net/selenium/tables");
         driver.manage().window().maximize();
 
@@ -31,7 +31,7 @@ public class Activity8_2 {
         System.out.println("Cell value of second row second column after sorting is - " + secondRowSecondColValue2);
 
         List<WebElement> footer = driver.findElements(By.xpath("//table[@id='sortableTable']/tfoot"));
-        System.out.println("Footer cell vlaues are: ");
+        System.out.println("Footer cell values are: ");
         for (WebElement footercellValue: footer){
             System.out.println(footercellValue.getText());
         }
